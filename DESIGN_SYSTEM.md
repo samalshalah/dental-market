@@ -30,7 +30,7 @@ Use black, white, blue, and cyan as the main brand palette. Avoid introducing ne
 
 ## Typography Rules
 
-- Use the existing Manrope-based global font stack.
+- Use the Georgia-based global serif font stack: `Georgia, "Times New Roman", Times, serif`.
 - Use one H1 per page.
 - Use the shared `Hero` component for page H1s.
 - Use `.section-heading` for major H2 sections.
