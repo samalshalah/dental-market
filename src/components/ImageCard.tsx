@@ -9,10 +9,10 @@ type ImageCardProps = {
 
 export function ImageCard({ title, body, imageSrc, imageAlt }: ImageCardProps) {
   return (
-    <article className="surface-card group h-full overflow-hidden transition hover:bg-surface-soft">
+    <article className="group h-full overflow-hidden border border-clinical-line bg-white transition hover:border-[#050505] hover:bg-surface-soft">
       <div className="relative aspect-[16/10] bg-clinical-calm">
-        <Image src={imageSrc} alt={imageAlt} fill sizes="(min-width: 1024px) 30vw, 92vw" className="object-cover" />
-        <div className="absolute inset-0 bg-[#050505]/28 transition group-hover:bg-[#050505]/18" aria-hidden="true" />
+        <Image src={imageSrc} alt={imageAlt} fill sizes="(min-width: 1024px) 30vw, 92vw" className="object-cover grayscale transition duration-500 group-hover:grayscale-0" />
+        <div className="absolute inset-0 bg-[#050505]/24 transition group-hover:bg-[#050505]/12" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 p-5">
           <span className="text-xs font-bold uppercase tracking-wide text-blue-100">Dental Market</span>
         </div>

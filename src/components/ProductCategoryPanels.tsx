@@ -73,8 +73,8 @@ export function ProductCategoryPanels({ items }: ProductCategoryPanelsProps) {
         <p className="section-kicker">Product categories</p>
         <h2 className="section-heading mt-3 max-w-3xl">Built for manufacturers, not dental clinic marketing</h2>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-clinical-muted">
-          Dental Market is built for suppliers, factories, and export teams evaluating a U.S. commercial path, so the
-          content focuses on product categories, buyer readiness, validation, and market-entry decisions.
+          Dental Market is for suppliers, factories, and export teams seeking a U.S. commercial path. The work focuses
+          on product qualification, buying review, supplier readiness, and separate B2B marketing preparation.
         </p>
       </div>
     </div>

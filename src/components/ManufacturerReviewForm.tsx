@@ -6,22 +6,24 @@ import { site } from "@/lib/site";
 type FormState = "idle" | "submitting" | "success" | "error";
 
 const productCategories = [
-  "Dental supplies",
-  "Dental instruments",
-  "Dental equipment",
+  "Dental consumables",
+  "Disposable dental supplies",
   "Infection control",
-  "Dental lab products",
   "Dental accessories",
-  "Private label / OEM",
-  "Other dental product category"
+  "Oral-care supplies",
+  "Clinic organization supplies",
+  "Preventive-care supplies",
+  "Packaging-ready dental supplies",
+  "OEM / private-label dental supply products",
+  "Selected small instruments or supply-related products"
 ];
 
 const marketStages = [
   "Not selling in the U.S. yet",
-  "Exploring distributors or agents",
+  "Exploring U.S. buyers or partners",
   "Attended trade shows / received U.S. interest",
   "Already selling limited volume in the U.S.",
-  "Need digital launch, leads, or e-commerce planning"
+  "Need B2B website, SEO, or trade-show follow-up support"
 ];
 
 export function ManufacturerReviewForm() {
@@ -38,7 +40,7 @@ export function ManufacturerReviewForm() {
     const payload = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("/api/enrollment", {
+      const response = await fetch("/api/product-submission", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -51,7 +53,7 @@ export function ManufacturerReviewForm() {
       }
 
       setState("success");
-      setMessage(data.message || "Your manufacturer review request was sent. Dental Market will review your information.");
+      setMessage(data.message || "Your product submission was sent. Dental Market will review your information.");
       form.reset();
     } catch (error) {
       setState("error");
@@ -61,24 +63,24 @@ export function ManufacturerReviewForm() {
 
   return (
     <section className="bg-white px-5 py-12 text-[#050505] sm:px-6 lg:px-8 lg:py-20" aria-label="Manufacturer review form">
-      <div className="mx-auto grid max-w-[1750px] gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+      <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
         <div className="surface-panel p-7 lg:sticky lg:top-32 lg:p-9">
-          <p className="section-kicker">Native website form</p>
+          <p className="section-kicker">Native product submission form</p>
           <h2 className="mt-3 text-3xl font-medium leading-tight text-[#050505] md:text-4xl">
-            Request a practical U.S. market review.
+            Submit dental supply information before sending samples.
           </h2>
           <p className="mt-5 body-copy">
-            Share the details a factory director, export manager, or brand owner would normally discuss before spending
-            on U.S. distributors, inventory, warehousing, campaigns, or e-commerce.
+            Share the details a factory director, export manager, or brand owner would normally discuss before sending
+            samples, preparing U.S. buyer materials, or expecting brand cooperation.
           </p>
           <div className="mt-8 space-y-4 text-sm leading-6 text-clinical-muted">
             <div className="border-t border-clinical-line pt-4">
-              <strong className="text-[#050505]">What we review:</strong> category, current U.S. activity, website
-              readiness, buyer path, and possible validation or entry needs.
+              <strong className="text-[#050505]">What we review:</strong> supply category, current U.S. activity, sample
+              availability, packaging readiness, supplier readiness, and possible buying-review fit.
             </div>
             <div className="border-t border-clinical-line pt-4">
-              <strong className="text-[#050505]">What happens next:</strong> qualified manufacturers may receive a
-              recommendation for validation, entry planning, or a strategy conversation.
+              <strong className="text-[#050505]">What happens next:</strong> qualified manufacturers may receive
+              next-step instructions. Do not send samples until Dental Market confirms that the product is qualified for review.
             </div>
             <div className="border-t border-clinical-line pt-4">
               <strong className="text-[#050505]">Direct email:</strong>{" "}
@@ -123,7 +125,7 @@ export function ManufacturerReviewForm() {
           </label>
 
           <label className="grid gap-2 text-sm font-semibold text-[#050505]">
-            Product category *
+            Dental supply category *
             <select name="productCategory" required className="form-field">
               <option value="">Select category</option>
               {productCategories.map((category) => (
@@ -147,23 +149,23 @@ export function ManufacturerReviewForm() {
           </label>
 
           <label className="grid gap-2 text-sm font-semibold text-[#050505] md:col-span-2">
-            What do you want to understand about the U.S. market? *
+            What supply item do you want Dental Market to review? *
             <textarea
               name="goals"
               required
               rows={5}
               className="form-field resize-y"
-              placeholder="Example: distributor readiness, U.S. buyer interest, pricing expectations, lead generation, e-commerce, private label, or product-market fit."
+              placeholder="Example: supply category, sample availability, packaging, pricing logic, U.S. buyer interest, B2B website/SEO, or trade-show follow-up."
             />
           </label>
 
           <label className="grid gap-2 text-sm font-semibold text-[#050505] md:col-span-2">
-            Product notes or links
+            Supply notes or links
             <textarea
               name="productNotes"
               rows={4}
               className="form-field resize-y"
-              placeholder="Share product lines, catalogs, certifications to review with qualified advisors, or current U.S. questions."
+              placeholder="Share supply lines, catalogs, sample details, packaging options, or current U.S. questions."
             />
           </label>
 
@@ -173,7 +175,7 @@ export function ManufacturerReviewForm() {
               disabled={state === "submitting"}
               className="inline-flex min-h-12 w-full items-center justify-center bg-dental-blue px-6 py-3.5 text-base font-semibold text-white transition hover:bg-dental-cyan hover:text-[#050505] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
             >
-              {state === "submitting" ? "Sending..." : "Send Review Request"}
+              {state === "submitting" ? "Sending..." : "Send Supply Submission"}
             </button>
             {message ? (
               <p
@@ -188,21 +190,9 @@ export function ManufacturerReviewForm() {
               </p>
             ) : null}
             <p className="mt-5 text-xs leading-6 text-clinical-muted">
-              Dental Market provides market research, digital marketing, business development, and market-entry planning
-              services. Dental Market does not provide legal, FDA, regulatory, clinical, customs, tax, import, product
-              safety, or medical advice.
-            </p>
-            <p className="mt-3 text-xs leading-6 text-clinical-muted">
-              Backup form:{" "}
-              <a
-                href="https://form.jotform.com/261436432834053"
-                className="font-semibold text-dental-blue hover:text-dental-cyan"
-                target="_blank"
-                rel="noreferrer"
-              >
-                open the secure Jotform version
-              </a>
-              .
+              Dental Market provides dental supply sourcing review, buying-readiness review, market-readiness support, B2B
+              marketing, website, SEO, sales-material, trade-show follow-up, and business development support. Dental Market does not provide
+              legal, FDA, regulatory, clinical, customs, tax, import, product-safety, or medical advice.
             </p>
           </div>
         </form>

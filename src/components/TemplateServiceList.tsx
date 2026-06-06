@@ -19,15 +19,15 @@ type TemplateServiceListProps = {
   items: TemplateServiceItem[];
 };
 
-export function TemplateServiceList({ eyebrow, title, intro, imageSrc, items }: TemplateServiceListProps) {
+export function TemplateServiceList({ eyebrow, title, intro, imageSrc, imageAlt, items }: TemplateServiceListProps) {
   return (
     <div className="grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
       <div className="relative overflow-hidden border border-[#050505] bg-[#050505] p-8 text-white lg:sticky lg:top-28 lg:min-h-[36rem] lg:p-10">
-        <Image src={imageSrc} alt="" fill sizes="(min-width: 1024px) 36vw, 92vw" className="object-cover opacity-[0.48]" />
-        <div className="absolute inset-0 bg-[#050505]/38" />
+        <Image src={imageSrc} alt={imageAlt} fill sizes="(min-width: 1024px) 36vw, 92vw" className="object-cover opacity-[0.58] grayscale" />
+        <div className="absolute inset-0 bg-[#050505]/30" />
         <div className="relative">
           <p className="text-xs font-bold uppercase tracking-wide text-blue-200">{eyebrow}</p>
-          <h2 className="mt-3 text-4xl font-medium leading-tight text-white sm:text-5xl lg:text-6xl">{title}</h2>
+          <h2 className="mt-3 text-3xl font-medium leading-tight text-white sm:text-4xl lg:text-[2.55rem]">{title}</h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">{intro}</p>
         </div>
       </div>
@@ -40,7 +40,7 @@ export function TemplateServiceList({ eyebrow, title, intro, imageSrc, items }: 
             </div>
             <div>
               {item.eyebrow ? <p className="section-kicker">{item.eyebrow}</p> : null}
-              <h3 className="text-3xl font-medium leading-tight text-[#050505]">{item.title}</h3>
+              <h3 className="text-2xl font-medium leading-tight text-[#050505]">{item.title}</h3>
               <p className="mt-5 leading-7 text-clinical-muted">{item.body}</p>
               {item.details?.length ? (
                 <ul className="mt-7 grid gap-3 border-t border-clinical-line pt-5 text-sm leading-6 text-clinical-muted">

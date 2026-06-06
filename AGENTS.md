@@ -1,3 +1,21 @@
+# DentalMKT.us Design Rules
+
+1. The uploaded theme is the visual source of truth. If the original uploaded theme files are not present in the repository, use the current theme-derived implementation in `src/components`, `src/app/globals.css`, and `tailwind.config.ts` as the active source of truth.
+2. Do not introduce new visual styles unless necessary.
+3. Use shared components for Header, Footer, Button, Card, PageHero, CTASection, StepCard, FeatureGrid, and FormPlaceholder.
+4. Maintain one consistent design system across all pages.
+5. Use consistent section spacing, max-widths, heading hierarchy, button style, card style, border radius, and shadows.
+6. Do not mix old website styling with theme styling.
+7. Do not create Chinese pages or Chinese content unless explicitly requested.
+8. Do not create a standalone Dentist Feedback service page.
+9. Dentist feedback only appears as part of the internal buying review process.
+10. Keep the buying review path and B2B marketing path clearly separate.
+11. B2B marketing is a separate service, not part of the buying process.
+12. Do not promise guaranteed purchase, sales, distribution, FDA review, clinical testing, dentist approval, or product certification.
+13. Keep content concise, manufacturer-friendly, and B2B.
+14. Run lint/build/test after changes when available.
+15. Summarize design and code changes after each task.
+
 # Website Design, Content, and SEO Rules
 
 You are building a professional, SEO-focused website. Your main goal is consistency, high-quality topic-specific content, and clean reusable code.

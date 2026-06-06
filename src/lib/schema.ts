@@ -22,7 +22,8 @@ export function organizationSchema() {
     name: site.name,
     legalName: site.legalName,
     url: site.url,
-    description: site.tagline,
+    description:
+      "U.S.-based dental supply sourcing review and B2B marketing support for qualified dental supply manufacturers.",
     areaServed: "United States",
     address: postalAddressSchema(),
     sameAs: []
@@ -36,7 +37,7 @@ export function professionalServiceSchema() {
     name: site.name,
     url: site.url,
     description:
-      "U.S. market entry, digital marketing, lead generation, and market validation services for international dental manufacturers.",
+      "Dental supply sourcing review, buying-readiness review, market-readiness support, and separate B2B marketing services for dental supply manufacturers.",
     areaServed: "United States",
     provider: {
       "@type": "Organization",
@@ -46,11 +47,11 @@ export function professionalServiceSchema() {
     },
     address: postalAddressSchema(),
     serviceType: [
-      "U.S. dental market entry",
-      "Dental manufacturer marketing",
-      "Dental lead generation",
-      "Dental product market research",
-      "Distributor readiness planning"
+      "Dental supply sourcing review",
+      "Dental supply buying-readiness review",
+      "Dental supply manufacturer B2B marketing",
+      "Dental supply market-readiness support",
+      "Distributor and dealer marketing preparation"
     ]
   };
 }
@@ -108,7 +109,7 @@ export function serviceSchema({
     },
     audience: {
       "@type": "BusinessAudience",
-      audienceType: "International dental manufacturers"
+      audienceType: "International dental supply manufacturers"
     }
   };
 }

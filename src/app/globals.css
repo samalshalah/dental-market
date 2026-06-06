@@ -29,16 +29,18 @@ a {
 }
 
 ::selection {
-  background: #cfe9ff;
+  background: #12c7ea;
+  color: #050505;
+  -webkit-text-fill-color: #050505;
 }
 
 @layer components {
   .surface-card {
-    @apply rounded-card border border-clinical-line bg-surface-card shadow-card;
+    @apply border border-clinical-line bg-white;
   }
 
   .surface-panel {
-    @apply rounded-panel border border-clinical-line bg-surface-elevated shadow-soft;
+    @apply border border-clinical-line bg-surface-elevated;
   }
 
   .section-kicker {
@@ -46,7 +48,7 @@ a {
   }
 
   .section-heading {
-    @apply text-4xl font-medium tracking-normal text-dental-navy sm:text-section;
+    @apply text-3xl font-medium tracking-normal text-dental-navy sm:text-section;
   }
 
   .body-copy {
@@ -58,7 +60,7 @@ a {
   }
 
   .form-surface {
-    @apply rounded-panel border border-clinical-line bg-white p-6 shadow-card;
+    @apply border border-clinical-line bg-white p-6;
   }
 
   .marquee-track {

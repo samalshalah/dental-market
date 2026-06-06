@@ -6,15 +6,15 @@ type MarketValidationSectionProps = {
 };
 
 const validationPoints = [
-  "Review category demand and competitor positioning before U.S. launch spend.",
-  "Clarify pricing signals, buyer language, and digital readiness gaps.",
-  "Test lead capture and buyer interest before inventory, warehousing, or distributor commitments."
+  "Review supply presentation, packaging, instructions, and English buyer materials.",
+  "Use internal non-clinical dental-market feedback for selected supplies.",
+  "Clarify buying fit, buyer objections, supplier readiness, and possible cooperation paths."
 ];
 
 export function MarketValidationSection({ validationLine }: MarketValidationSectionProps) {
   return (
     <section className="bg-white px-5 py-20 sm:px-6 lg:px-8 lg:py-32">
-      <div className="mx-auto grid max-w-[1750px] gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <div className="mx-auto grid max-w-[1200px] gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div className="relative min-h-[34rem]">
           <div className="absolute left-0 top-0 h-[82%] w-[82%] overflow-hidden border border-[#050505] bg-[#050505]">
             <Image
@@ -41,19 +41,19 @@ export function MarketValidationSection({ validationLine }: MarketValidationSect
           </div>
 
           <div className="absolute right-8 top-10 flex h-36 w-36 items-center justify-center rounded-full border border-dental-cyan/50 bg-white/95 p-4 text-center text-xs font-bold uppercase leading-5 tracking-wide text-[#050505] shadow-lift backdrop-blur">
-            Validate before U.S. investment
+            Review before samples
           </div>
         </div>
 
         <div>
-          <p className="section-kicker">Market validation before investment</p>
-          <h2 className="section-heading mt-4">Do not enter the U.S. market blindly.</h2>
+          <p className="section-kicker">Buying review before investment</p>
+          <h2 className="section-heading mt-4">Do not send samples or expect orders before qualification.</h2>
           <div className="mt-7 space-y-5 text-lg leading-8 text-clinical-muted">
             <p className="font-semibold text-[#050505]">{validationLine}</p>
             <p>
-              Many international dental manufacturers spend heavily on trade shows, distributors, inventory, or
-              warehousing before they understand U.S. demand, buyer expectations, category language, pricing pressure,
-              and digital readiness. Dental Market helps manufacturers test and plan first.
+              Many international dental supply manufacturers spend heavily on trade shows, distributors, inventory, or
+              warehousing before they understand supply fit, buyer expectations, packaging questions, and supplier
+              readiness. Dental Market starts with a controlled buying review.
             </p>
           </div>
           <div className="mt-8 grid gap-0 border-y border-clinical-line">
@@ -65,11 +65,11 @@ export function MarketValidationSection({ validationLine }: MarketValidationSect
             ))}
           </div>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/enrollment/" size="lg">
-              Start Manufacturer Review
+            <ButtonLink href="/work-with-dental-market/" size="lg">
+              Submit Dental Supply for Buying Review
             </ButtonLink>
-            <ButtonLink href="/us-dental-market-research/" variant="secondary" size="lg">
-              View Market Research
+            <ButtonLink href="/sell-dental-supplies/" variant="secondary" size="lg">
+              View Buying Instructions
             </ButtonLink>
           </div>
         </div>

@@ -1,16 +1,30 @@
 export const site = {
   name: "Dental Market",
-  domain: "DentalMkt.us",
+  shortName: "DentalMKT",
+  domain: "DentalMKT.us",
   url: "https://dentalmkt.us",
-  tagline: "U.S. Market Entry & Digital Growth for Dental Manufacturers",
+  tagline: "U.S. Dental Supply Sourcing Review & B2B Marketing for Manufacturers",
   legalName: "Magic Carpet Media LLC",
   legalNote: "Dental Market is an assumed business name / DBA of Magic Carpet Media LLC.",
+  socialImage: "/social/dental-market-og.jpg",
+  socialImageAlt: "DentalMKT dental supply sourcing review and B2B marketing for dental supply manufacturers",
   email: "info@dentalmkt.us",
   phone: "+14437645756",
   phoneDisplay: "+1 (443) 764-5756",
   whatsapp: "+14437645756",
   whatsappUrl: "https://wa.me/14437645756",
   wechat: "+14437645756",
+  primaryCta: "Work With Dental Market",
+  compliance:
+    "Dental Market does not provide legal, FDA, regulatory, clinical, product-safety, customs, tax, import, or medical advice.",
+  reviewDisclaimer:
+    "Product review does not guarantee purchase orders, distribution, sales, private-label cooperation, brand cooperation, or supplier partnership.",
+  sampleDisclaimer:
+    "Manufacturers should not send samples until Dental Market confirms that the product is qualified for review.",
+  dentistFeedbackDisclosure:
+    "Selected supplies may receive internal non-clinical feedback from U.S. dentists and dental professionals as part of Dental Market's buying review process.",
+  dentistFeedbackDisclaimer:
+    "Internal dentist feedback is structured non-clinical market feedback only. It is not clinical testing, patient-use testing, FDA review, product approval, product-safety certification, or legal/regulatory advice.",
   address: {
     street: "230 Fort Evans Rd NE",
     city: "Leesburg",
@@ -23,188 +37,299 @@ export const site = {
 
 export const navItems = [
   { href: "/", label: "Home" },
-  { href: "/services/", label: "Services" },
-  { href: "/us-market-entry-packages/", label: "Packages" },
+  { href: "/sell-dental-supplies/", label: "Sell Dental Supplies" },
+  { href: "/b2b-marketing/", label: "B2B Marketing" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" }
 ];
 
 export const pageMeta = {
   home: {
-    title: "Dental Market | U.S. Market Entry for Dental Manufacturers",
+    title: "Dental Market | Sourcing Dental Supplies for the U.S. Market",
     description:
-      "Dental Market helps international dental manufacturers validate, launch, and grow in the U.S. market through research, digital strategy, lead generation, and market-entry planning.",
+      "Dental Market is a U.S.-based dental supply sourcing group sourcing selected dental supplies from qualified manufacturers through a structured buying review process.",
     path: "/"
   },
-  services: {
-    title: "U.S. Market Entry Services for Dental Manufacturers | Dental Market",
+  sellDentalSupplies: {
+    title: "Sell Dental Supplies to Dental Market | Buying Review",
     description:
-      "Market research, digital launch planning, SEO, lead generation, distributor readiness, and e-commerce strategy for dental manufacturers entering the U.S. market.",
-    path: "/services/"
+      "Submit dental supplies for Dental Market's buying review process. Qualified supply items may move to purchase, private-label, brand cooperation, or supplier partnership decisions.",
+    path: "/sell-dental-supplies/"
   },
-  packages: {
-    title: "U.S. Market Entry Packages for Dental Manufacturers | Dental Market",
+  b2bMarketing: {
+    title: "B2B Marketing, Websites & SEO for Dental Supply Manufacturers | Dental Market",
     description:
-      "Compare Dental Market's two simple package paths: U.S. Market Validation for clarity and U.S. Market Entry for manufacturers ready to prepare a commercial U.S. path.",
-    path: "/us-market-entry-packages/"
+      "Dental Market provides separate B2B marketing services for dental supply manufacturers, including websites, SEO, product pages, sales materials, and buyer follow-up systems.",
+    path: "/b2b-marketing/"
   },
-  marketResearch: {
-    title: "U.S. Dental Market Research for International Manufacturers | Dental Market",
+  workWith: {
+    title: "Work With Dental Market | Dental Supply Buying Review & B2B Marketing",
     description:
-      "Dental Market helps international dental manufacturers evaluate U.S. demand, competitors, pricing, positioning, and buyer readiness before investing in distribution or inventory.",
-    path: "/us-dental-market-research/"
-  },
-  enrollment: {
-    title: "Manufacturer Enrollment | Dental Market",
-    description:
-      "Start a Dental Market manufacturer review so our team can evaluate your dental product category, U.S. readiness, and practical next step for market clarity.",
-    path: "/enrollment/"
+      "Choose your path with Dental Market: submit dental supplies for buying review, request B2B marketing support, both, or ask which option fits.",
+    path: "/work-with-dental-market/"
   },
   about: {
-    title: "About Dental Market | Dental Market Advisors USA",
+    title: "About Dental Market | U.S. Dental Supply Sourcing Group",
     description:
-      "Learn how Dental Market supports advisory collaboration between dental business operators, dentists, and international dental companies evaluating U.S. dental market opportunities.",
+      "Learn how Dental Market reviews selected manufacturer dental supplies for the U.S. market and supports separate B2B marketing for dental supply manufacturers.",
     path: "/about/"
   },
   contact: {
-    title: "Contact Dental Market | U.S. Market Entry Strategy",
+    title: "Contact Dental Market | Submit Dental Supplies or Request B2B Marketing",
     description:
-      "Contact Dental Market to discuss U.S. market validation, digital growth, and lead generation for dental manufacturers.",
+      "Contact Dental Market to submit dental supplies for buying review or request separate B2B marketing support for U.S. websites, SEO, product pages, and follow-up.",
     path: "/contact/"
+  },
+  faq: {
+    title: "FAQ for Dental Supply Manufacturers | Dental Market",
+    description:
+      "Answers for dental supply manufacturers about Dental Market's buying review, sample requests, internal non-clinical market feedback, and separate B2B marketing support.",
+    path: "/faq/"
   },
   privacy: {
     title: "Privacy Policy | Dental Market",
-    description: "Privacy policy for Dental Market, a B2B market-entry and lead generation website for dental manufacturers.",
+    description: "Privacy policy for Dental Market, a B2B dental supply sourcing review and marketing website for manufacturers.",
     path: "/privacy-policy/"
   },
   terms: {
     title: "Terms and Disclaimer | Dental Market",
     description:
-      "Terms and disclaimer for Dental Market market research, digital marketing, and U.S. market-entry planning services.",
+      "Terms and disclaimer for Dental Market dental supply sourcing review, buying-readiness review, market-readiness support, and B2B marketing services.",
     path: "/terms-disclaimer/"
   }
 } as const;
 
 export const audiences = [
   "Dental supply manufacturers",
-  "Dental equipment companies",
-  "Infection control suppliers",
-  "Dental lab product manufacturers",
-  "Dental accessories brands",
-  "Private label dental product companies",
-  "Export-focused dental manufacturers"
+  "Dental consumable manufacturers",
+  "Disposable dental supply manufacturers",
+  "Infection-control supply manufacturers",
+  "Dental accessory brands",
+  "Oral-care supply manufacturers",
+  "Clinic supply product manufacturers",
+  "OEM and private-label capable supply factories",
+  "Export teams preparing for U.S. buyer conversations",
+  "Manufacturers attending dental exhibitions"
 ];
 
-export const whatWeDo = [
-  "U.S. Market Research",
-  "Competitor & Pricing Analysis",
-  "Product-Market Fit Review",
-  "Digital Launch Strategy",
-  "Dental Lead Generation",
-  "E-Commerce & Website Planning",
-  "Distributor Readiness",
-  "U.S. Market Validation"
+export const productCategories = [
+  "Dental consumables",
+  "Disposable dental supplies",
+  "Infection-control supplies",
+  "Dental accessories",
+  "Oral-care supplies",
+  "Clinic organization supplies",
+  "Preventive-care supplies",
+  "Packaging-ready dental supplies",
+  "OEM / private-label dental supply products",
+  "Selected small instruments or supply-related products"
+];
+
+export const sourcingCards = [
+  {
+    title: "Dental Supply Sourcing",
+    body: "We actively source selected dental supplies from qualified manufacturers."
+  },
+  {
+    title: "Buying Review",
+    body: "Supply items are reviewed before purchase, private-label, brand cooperation, or supplier partnership decisions."
+  },
+  {
+    title: "U.S. Market Fit",
+    body: "We evaluate whether the supply item may fit U.S. dental buyers, packaging expectations, pricing logic, and business goals."
+  }
+];
+
+export const buyingSteps = [
+  {
+    title: "Submit Supply Information",
+    body: "Submit your company details, supply category, product description, website or catalog, and sample availability."
+  },
+  {
+    title: "Wait for Qualification",
+    body: "Dental Market reviews whether the supply item fits current sourcing goals."
+  },
+  {
+    title: "Send Samples Only If Invited",
+    body: "Manufacturers should not send samples until Dental Market confirms the product is qualified for review."
+  },
+  {
+    title: "Supply Review Process",
+    body: "Selected supplies may be reviewed for quality, presentation, packaging, market fit, and internal dental-professional feedback."
+  },
+  {
+    title: "Next-Step Decision",
+    body: "Dental Market may determine that the supply item is not a fit, needs improvement, should move to purchase discussion, private-label discussion, brand cooperation, supplier partnership, or separate B2B marketing support."
+  }
+];
+
+export const manufacturerFitItems = [
+  "Dental supply manufacturers with export-ready products",
+  "OEM and private-label capable factories",
+  "Manufacturers with clear product specifications",
+  "Manufacturers that can provide samples when invited",
+  "Manufacturers with packaging or customization options",
+  "Manufacturers seeking U.S. buying or brand cooperation",
+  "Manufacturers with competitive pricing and reliable supply capacity"
+];
+
+export const reviewFactors = [
+  "Supply category",
+  "Supply use case",
+  "Supply quality and presentation",
+  "Packaging and instructions",
+  "Sample availability",
+  "Pricing and MOQ logic",
+  "U.S. buyer fit",
+  "Private-label or brand potential",
+  "Supplier communication",
+  "Supply claims and market-readiness concerns"
+];
+
+export const reviewOutcomes = [
+  {
+    title: "Purchase Discussion",
+    body: "The supply item may move to pricing, MOQ, packaging, and supplier-term discussion."
+  },
+  {
+    title: "Private Label Discussion",
+    body: "The supply item may fit a private-label or Dental Market brand opportunity."
+  },
+  {
+    title: "Brand Cooperation",
+    body: "The supply item may fit a cooperation model under Dental Market or another U.S.-focused brand structure."
+  },
+  {
+    title: "Supplier Partnership",
+    body: "The manufacturer may qualify as a supplier partner for future sourcing."
+  },
+  {
+    title: "Improvement Needed",
+    body: "Packaging, English materials, claims, pricing, or positioning may need improvement."
+  },
+  {
+    title: "Not a Fit",
+    body: "Some supplies may not match Dental Market's current sourcing goals."
+  },
+  {
+    title: "B2B Marketing Support",
+    body: "Some manufacturers may not fit the buying path but may still need separate B2B marketing support."
+  }
+];
+
+export const b2bMarketingServices = [
+  "English website strategy",
+  "Website cleanup",
+  "SEO for dental supply categories",
+  "Supply landing pages",
+  "Private-label buyer pages",
+  "Distributor/dealer pages",
+  "Supply catalog rewriting",
+  "Sales deck improvement",
+  "Trade-show follow-up emails",
+  "WhatsApp / WeChat / email scripts",
+  "CRM and lead tracking setup",
+  "Multilingual-ready website structure for future translation"
+];
+
+export const marketingProblems = [
+  {
+    title: "Weak English Website",
+    body: "The website does not explain the product clearly to U.S. buyers."
+  },
+  {
+    title: "Poor SEO Visibility",
+    body: "U.S. buyers cannot find the manufacturer online."
+  },
+  {
+    title: "Unclear Supply Pages",
+    body: "Supply benefits, specifications, and buyer value are not clear."
+  },
+  {
+    title: "Weak Sales Materials",
+    body: "Catalogs, PDFs, and pitch decks do not look ready for U.S. business buyers."
+  },
+  {
+    title: "No Follow-Up System",
+    body: "Trade-show leads are collected but not properly organized or followed up."
+  }
+];
+
+export const marketingProcess = [
+  {
+    title: "Manufacturer submits marketing inquiry",
+    body: "Share the website, supply category, target buyer, and support needed."
+  },
+  {
+    title: "Dental Market reviews current materials",
+    body: "We review website clarity, product pages, SEO structure, sales materials, and U.S. goals."
+  },
+  {
+    title: "Meeting is scheduled",
+    body: "Dental Market schedules a focused discussion to understand the supply category, market goal, and internal resources."
+  },
+  {
+    title: "Scope is defined",
+    body: "The project may include website pages, SEO, landing pages, sales assets, follow-up messages, or CRM setup."
+  },
+  {
+    title: "Marketing assets are created",
+    body: "Website, SEO, landing page, sales material, or follow-up assets are created for U.S. buyer conversations."
+  },
+  {
+    title: "Manufacturer receives launch-ready materials",
+    body: "The manufacturer receives buyer-facing materials designed to support U.S. B2B conversations."
+  }
 ];
 
 export const services = [
   {
-    title: "Market Research & Competitive Analysis",
-    meaning: "We review the product category, competing U.S. offers, visible pricing, buyer segments, and market signals.",
-    matters: "Manufacturers need to understand the competitive field before spending on exhibitions, inventory, or sales outreach.",
-    receive: "A focused research summary with category observations, competitor examples, pricing notes, and recommended next steps."
+    title: "Dental Supply Sourcing and Buying Review",
+    meaning:
+      "A structured review path for selected dental supplies before any purchase, private-label, brand cooperation, or supplier partnership decision.",
+    matters:
+      "Manufacturers need a clear gate before sample sending, order discussion, or cooperation expectations.",
+    receive: "Qualification review, buying instructions, sample guidance if invited, and a practical next-step decision."
   },
   {
-    title: "Digital Launch Planning",
-    meaning: "We map the digital foundation needed to introduce a dental product line to U.S. buyers.",
-    matters: "A clear landing page, message, offer, and lead path helps buyers understand why a new manufacturer is worth a conversation.",
-    receive: "Launch priorities, messaging direction, channel recommendations, and a practical 60-90 day action plan."
-  },
-  {
-    title: "Lead Generation Strategy",
-    meaning: "We design campaigns and outreach paths for dental dealers, DSOs, practices, labs, and category-specific buyers.",
-    matters: "Demand signals are more useful than assumptions when deciding whether to invest further in the United States.",
-    receive: "Campaign structure, lead capture approach, audience direction, qualification criteria, and reporting recommendations."
-  },
-  {
-    title: "Website & SEO Strategy",
-    meaning: "We evaluate and plan U.S.-focused website structure, search visibility, landing pages, and keyword targeting.",
-    matters: "International manufacturers often lose credibility when U.S. buyers cannot quickly understand the product, proof, and buying path.",
-    receive: "SEO themes, page recommendations, conversion improvements, and content priorities for U.S. market entry."
-  },
-  {
-    title: "Google Ads & Campaign Planning",
-    meaning: "We plan paid search and campaign structures designed to test demand and capture buyer intent.",
-    matters: "Paid campaigns can validate positioning, keywords, and buyer interest faster than waiting for organic traffic alone.",
-    receive: "Keyword direction, budget guidance, landing page recommendations, conversion tracking needs, and campaign roadmap."
-  },
-  {
-    title: "Distributor Readiness",
-    meaning: "We help manufacturers prepare the business materials and digital proof points distributors expect to see.",
-    matters: "Distributors are more likely to engage when the manufacturer can show positioning, U.S. demand signals, pricing logic, and support assets.",
-    receive: "A readiness checklist, recommended sales materials, buyer objections to address, and channel strategy notes."
-  },
-  {
-    title: "E-Commerce & Fulfillment Planning",
-    meaning: "We assess whether direct sales, marketplace, distributor, or hybrid models fit the product and category.",
-    matters: "The wrong sales model can create operational cost before demand is proven.",
-    receive: "Recommended path options, website and checkout considerations, fulfillment planning questions, and risk notes."
-  },
-  {
-    title: "Private Label Opportunity Review",
-    meaning: "We assess whether a manufacturer may be positioned for private label, OEM, or U.S. brand partnership conversations.",
-    matters: "Some factories can enter faster by supporting established brands instead of launching under their own name first.",
-    receive: "Partner-fit observations, category considerations, messaging recommendations, and outreach direction."
+    title: "B2B Marketing for Dental Supply Manufacturers",
+    meaning:
+      "Separate marketing support for manufacturers that need stronger U.S. websites, SEO, supply pages, sales materials, and buyer follow-up systems.",
+    matters:
+      "Many manufacturers have strong supplies but weak English presentation and poor follow-up structure for U.S. buyers.",
+    receive: "A scoped marketing plan or production support for websites, SEO, supply pages, catalogs, follow-up, or CRM."
   }
 ];
 
-export const engagementOptions = [
+export const buyingFaqItems = [
   {
-    name: "U.S. Market Validation",
-    scope: "Validate before you scale",
-    bestFor: "Manufacturers that need clarity before committing to the U.S. market",
-    outcome: "A practical readiness review that helps determine if your product category, positioning, website, and buyer path are ready for a larger U.S. market-entry effort.",
-    includes: [
-      "Product category and U.S. readiness review",
-      "Competitor and visible market signal scan",
-      "Website, messaging, and buyer-trust observations",
-      "Validation gaps and recommended next-step path",
-      "Strategy review conversation for qualified manufacturers"
-    ]
+    question: "Does Dental Market buy dental supplies?",
+    answer:
+      "Dental Market is actively sourcing selected dental supplies for the U.S. market. Products must first complete buying review. Submitting a product does not guarantee purchase orders, sales, distribution, private-label cooperation, or brand cooperation."
   },
   {
-    name: "U.S. Market Entry",
-    scope: "Plan and prepare for entry",
-    bestFor: "Manufacturers ready to build a serious U.S. commercial path",
-    outcome: "A more complete market-entry direction for positioning, buyer segments, channel fit, digital launch priorities, and distributor or direct-sales readiness.",
-    includes: [
-      "Deeper competitor and positioning research",
-      "Buyer segment and channel recommendations",
-      "SEO, landing page, and campaign direction",
-      "Distributor, direct sales, or hybrid path guidance",
-      "Practical go-to-market roadmap"
-    ]
-  }
-];
-
-export const phases = [
-  {
-    title: "Phase 1: Assess",
-    body: "Review the product category, existing brand assets, current U.S. readiness, market signals, and obvious barriers."
+    question: "Should manufacturers send samples before qualification?",
+    answer:
+      "No. Manufacturers should first submit supply information. Dental Market will review the supply item and confirm whether samples are needed. Selected reviews may require approximately 10 sample units per product, depending on the category and review plan."
   },
   {
-    title: "Phase 2: Plan",
-    body: "Create positioning, buyer segments, channel direction, landing page structure, campaign priorities, and next-step budget logic."
+    question: "What role do dentists play in the buying process?",
+    answer:
+      "Dental Market may use internal structured non-clinical feedback from U.S. dentists and dental professionals during the buying review process. This feedback helps us understand market fit, supply presentation, buyer concerns, and perceived usefulness. It is not clinical testing, FDA review, product approval, or certification."
   },
   {
-    title: "Phase 3: Validate",
-    body: "Test messaging, lead capture, campaign traffic, search demand, and buyer interest before large U.S. commitments."
+    question: "Is dentist feedback a separate service?",
+    answer:
+      "No. Dentist feedback is part of Dental Market's internal buying review process for selected supplies. It is not sold as a standalone public service."
   },
   {
-    title: "Phase 4: Launch",
-    body: "Use the validation results to refine website content, campaign execution, outreach materials, and practical growth steps."
+    question: "Is B2B marketing separate from buying review?",
+    answer:
+      "Yes. B2B marketing is a separate service for manufacturers that need help with U.S. websites, SEO, product pages, sales materials, distributor/dealer presentation, or trade-show follow-up."
   },
   {
-    title: "Phase 5: Partner",
-    body: "Prepare for distributor, dealer, direct sales, e-commerce, or private label conversations with clearer proof and positioning."
+    question: "Does Dental Market provide FDA or legal advice?",
+    answer:
+      "No. Dental Market provides business, sourcing review, market-readiness, and B2B marketing services only. Manufacturers should consult qualified FDA, legal, regulatory, import, and product-safety professionals when needed."
   }
 ];

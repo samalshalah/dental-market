@@ -4,21 +4,21 @@ import { ButtonLink } from "./ButtonLink";
 const panels = [
   {
     number: "01",
-    title: "Assess",
+    title: "Qualify",
     image: "/images/dental-products/sterile-instrument-preparation-1200.webp",
-    body: "Review product category, digital readiness, buyer fit, and obvious U.S. market barriers."
+    body: "Review product category, supplier fit, sample availability, and whether the product matches current sourcing goals."
   },
   {
     number: "02",
-    title: "Position",
+    title: "Review",
     image: "/images/dental-products/restorative-dental-supplies-1200.webp",
-    body: "Translate product strengths into U.S.-ready messaging, landing pages, and sales materials."
+    body: "Evaluate product presentation, packaging, pricing logic, U.S. buyer fit, and internal non-clinical market feedback."
   },
   {
     number: "03",
-    title: "Validate",
+    title: "Decide",
     image: "/images/dental-products/dental-lab-production-components-1200.webp",
-    body: "Test market response before larger commitments to inventory, warehousing, or channel contracts."
+    body: "Decide whether the product may move toward purchase discussion, brand cooperation, supplier partnership, improvement, or no fit."
   }
 ];
 
@@ -29,7 +29,7 @@ type HomePanelShowcaseProps = {
 export function HomePanelShowcase({ validationLine }: HomePanelShowcaseProps) {
   return (
     <section className="bg-white px-5 py-20 sm:px-6 lg:px-8 lg:py-32">
-      <div className="mx-auto grid max-w-[1750px] gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="grid gap-4 md:grid-cols-3">
           {panels.map((panel) => (
             <article key={panel.title} className="group relative min-h-[30rem] overflow-hidden border border-[#050505] bg-[#050505]">
@@ -46,21 +46,20 @@ export function HomePanelShowcase({ validationLine }: HomePanelShowcaseProps) {
         </div>
 
         <div>
-          <p className="section-kicker">Market-entry clarity</p>
-          <h2 className="section-heading mt-4">Do not enter the U.S. market blindly.</h2>
+          <p className="section-kicker">Buying review clarity</p>
+          <h2 className="section-heading mt-4">Submit product information before samples or order discussion.</h2>
           <div className="mt-8 space-y-5 text-lg leading-8 text-clinical-muted">
             <p className="font-semibold text-[#050505]">
               {validationLine}
             </p>
             <p>
-              Many manufacturers invest in trade shows, distributors, inventory, or warehouses before validating U.S.
-              demand, pricing, messaging, and buyer interest. Dental Market helps manufacturers test and plan first with
-              market research, digital positioning, lead capture, campaign planning, and practical market-entry
-              recommendations.
+              Many manufacturers want to sell in the U.S. but need a clear buying path first. Dental Market starts with
+              product qualification, sample control, business review, and practical market-readiness feedback before any
+              purchase or cooperation discussion.
             </p>
           </div>
           <div className="mt-9">
-            <ButtonLink href="/enrollment/">Start Manufacturer Review</ButtonLink>
+            <ButtonLink href="/work-with-dental-market/">Submit Dental Supply for Buying Review</ButtonLink>
           </div>
         </div>
       </div>

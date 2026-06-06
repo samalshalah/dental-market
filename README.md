@@ -1,6 +1,16 @@
 # Dental Market
 
-Static Next.js website for Dental Market, a U.S. market entry and digital growth business for international dental manufacturers.
+Static Next.js website for Dental Market / DentalMKT, a U.S. dental supply sourcing review and B2B marketing platform for international dental supply manufacturers.
+
+## Public Pages
+
+- `/` - sourcing-first homepage
+- `/sell-dental-supplies/` - dental supply buying review instructions
+- `/work-with-dental-market/` - shared inquiry page for buying review, B2B marketing support, both, or not sure
+- `/b2b-marketing/` - separate B2B marketing service
+- `/about/` - company and team positioning
+- `/contact/` - choose product review or marketing support
+- `/privacy-policy/` and `/terms-disclaimer/`
 
 ## Development
 
@@ -30,15 +40,18 @@ The project uses `output: "export"` in `next.config.mjs`, so `npm run build` gen
 
 ## Forms and Contact Details
 
-The manufacturer review form is built into the site in `src/components/ManufacturerReviewForm.tsx`.
-Submissions are handled by the Cloudflare Pages Function at `functions/api/enrollment.ts` and sent through Resend.
+The public Work With Dental Market inquiry page embeds the Jotform form:
+`https://form.jotform.com/261561017615048`.
+
+A native form component and Cloudflare Pages Function remain in the codebase for a Resend-based form path:
+`src/components/ManufacturerReviewForm.tsx` and `functions/api/product-submission.ts`.
 
 Set these Cloudflare Pages environment variables before publishing:
 
 - `RESEND_API_KEY`: Resend API key.
-- `ENROLLMENT_TO_EMAIL`: destination inbox, usually `info@dentalmkt.us`.
+- `PRODUCT_SUBMISSION_TO_EMAIL`: destination inbox, usually `info@dentalmkt.us`.
 - `RESEND_FROM_EMAIL`: verified Resend sender, such as `Dental Market <forms@dentalmkt.us>`.
 
-The old Jotform URL remains available as a fallback link inside the native form.
+`ENROLLMENT_TO_EMAIL` is still accepted as a fallback by the optional native form function for older deployments.
 
 Update the contact details in `src/lib/site.ts` if the public email, WhatsApp, phone, or WeChat details change.

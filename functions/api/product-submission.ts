@@ -1,6 +1,7 @@
 type Env = {
   RESEND_API_KEY?: string;
   RESEND_FROM_EMAIL?: string;
+  PRODUCT_SUBMISSION_TO_EMAIL?: string;
   ENROLLMENT_TO_EMAIL?: string;
 };
 
@@ -78,8 +79,8 @@ export async function onRequestPost({ request, env }: PagesContext) {
 
   const html = `
     <div style="font-family:Arial,sans-serif;line-height:1.5;color:#111111;">
-      <h1 style="font-size:24px;margin:0 0 16px;">Dental Market manufacturer review request</h1>
-      <p style="margin:0 0 20px;color:#4f5f6d;">A manufacturer submitted the native Dental Market review form.</p>
+      <h1 style="font-size:24px;margin:0 0 16px;">Dental Market product submission</h1>
+      <p style="margin:0 0 20px;color:#4f5f6d;">A manufacturer submitted product information for buying review.</p>
       <table style="width:100%;border-collapse:collapse;border:1px solid #d9e4ee;">
         ${fieldRow("Company", submission.companyName)}
         ${fieldRow("Country", submission.country)}
@@ -89,7 +90,7 @@ export async function onRequestPost({ request, env }: PagesContext) {
         ${fieldRow("Website", submission.website)}
         ${fieldRow("Product category", submission.productCategory)}
         ${fieldRow("U.S. stage", submission.marketStage)}
-        ${fieldRow("Goals", submission.goals)}
+        ${fieldRow("Review request", submission.goals)}
         ${fieldRow("Product notes", submission.productNotes)}
       </table>
     </div>
@@ -107,9 +108,9 @@ export async function onRequestPost({ request, env }: PagesContext) {
     },
     body: JSON.stringify({
       from: env.RESEND_FROM_EMAIL || "Dental Market <onboarding@resend.dev>",
-      to: [env.ENROLLMENT_TO_EMAIL || "info@dentalmkt.us"],
+      to: [env.PRODUCT_SUBMISSION_TO_EMAIL || env.ENROLLMENT_TO_EMAIL || "info@dentalmkt.us"],
       reply_to: submission.email,
-      subject: `Dental Market review request: ${submission.companyName}`,
+      subject: `Dental Market product submission: ${submission.companyName}`,
       html,
       text
     })
@@ -120,7 +121,7 @@ export async function onRequestPost({ request, env }: PagesContext) {
   }
 
   return jsonResponse({
-    message: "Your review request was sent. Dental Market will review your information and contact qualified manufacturers."
+    message: "Your product submission was sent. Dental Market will review your information and contact qualified manufacturers."
   });
 }
 

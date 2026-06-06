@@ -1,0 +1,13 @@
+https://www.dentalmkt.us/* https://dentalmkt.us/:splat 301!
+/private-label /sell-dental-supplies/ 301
+/private-label/* /sell-dental-supplies/ 301
+/dentist-feedback /sell-dental-supplies/ 301
+/dentist-feedback/* /sell-dental-supplies/ 301
+/services /sell-dental-supplies/ 301
+/services/* /sell-dental-supplies/ 301
+/sell-to-dental-market /sell-dental-supplies/ 301
+/sell-to-dental-market/* /sell-dental-supplies/ 301
+/enrollment /work-with-dental-market/ 301
+/enrollment/* /work-with-dental-market/ 301
+/submit-product /work-with-dental-market/ 301
+/submit-product/* /work-with-dental-market/ 301

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { navItems, site } from "@/lib/site";
 import { BrandLogo } from "./BrandLogo";
@@ -5,26 +7,8 @@ import { ButtonLink } from "./ButtonLink";
 
 export function Header() {
   return (
-    <header className="sticky inset-x-0 top-0 z-40 -mb-[77px] text-white lg:-mb-[124px]">
-      <div className="hidden border-b border-white/15 bg-black/60 backdrop-blur-md lg:block">
-        <div className="mx-auto flex max-w-[1750px] flex-col gap-2 px-5 py-3 text-[0.72rem] font-bold uppercase tracking-wide text-white/80 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-            <span className="text-dental-cyan">{site.domain}</span>
-            <a href={`mailto:${site.email}`} className="transition hover:text-dental-cyan">
-              {site.email}
-            </a>
-            <a href={`tel:${site.phone}`} className="transition hover:text-dental-cyan">
-              {site.phoneDisplay}
-            </a>
-            <a href={site.whatsappUrl} className="transition hover:text-dental-cyan">
-              WhatsApp
-            </a>
-            <span>WeChat: {site.wechat}</span>
-          </div>
-          <p className="hidden text-white/70 lg:block">{site.address.display}</p>
-        </div>
-      </div>
-      <div className="mx-auto flex max-w-[1750px] flex-col gap-4 border-b border-white/10 bg-black/45 px-5 py-4 backdrop-blur-md sm:px-6 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-8 lg:bg-black/55 lg:px-8">
+    <header className="sticky inset-x-0 top-0 z-40 -mb-[80px] px-4 pt-3 text-white sm:px-6">
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-4 border border-white/10 bg-black/45 px-5 py-4 backdrop-blur-md sm:px-6 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-8 lg:bg-black/55">
         <div className="flex items-center justify-between">
           <BrandLogo variant="footer" />
           <details className="group relative lg:hidden">
@@ -38,7 +22,7 @@ export function Header() {
             </summary>
             <div
               id="mobile-navigation"
-              className="absolute right-0 top-14 w-[min(20rem,calc(100vw-2.5rem))] border border-white/15 bg-[#050505]/88 p-4 shadow-lift backdrop-blur-md"
+              className="absolute right-0 top-14 w-[min(22rem,calc(100vw-2.5rem))] border border-white/15 bg-[#050505]/90 p-4 backdrop-blur-md"
             >
               <nav aria-label="Mobile navigation" className="grid gap-1 text-sm font-bold uppercase tracking-wide">
                 {navItems.map((item) => (
@@ -52,24 +36,9 @@ export function Header() {
                 ))}
               </nav>
               <div className="mt-4">
-                <ButtonLink href="/enrollment/" size="sm">
-                  Start Manufacturer Review
+                <ButtonLink href="/work-with-dental-market/" size="sm">
+                  {site.primaryCta}
                 </ButtonLink>
-              </div>
-              <div className="mt-5 border-t border-white/10 pt-4 text-xs font-bold uppercase tracking-wide text-white/75">
-                <p className="text-dental-cyan">{site.domain}</p>
-                <div className="mt-3 grid gap-2">
-                  <a href={`tel:${site.phone}`} className="transition hover:text-dental-cyan">
-                    {site.phoneDisplay}
-                  </a>
-                  <a href={site.whatsappUrl} className="transition hover:text-dental-cyan">
-                    WhatsApp
-                  </a>
-                  <a href={`mailto:${site.email}`} className="break-all transition hover:text-dental-cyan">
-                    {site.email}
-                  </a>
-                  <span>WeChat: {site.wechat}</span>
-                </div>
               </div>
             </div>
           </details>
@@ -85,8 +54,8 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden lg:flex lg:justify-end">
-          <ButtonLink href="/enrollment/" size="sm">
-            Start Manufacturer Review
+          <ButtonLink href="/work-with-dental-market/" size="sm">
+            {site.primaryCta}
           </ButtonLink>
         </div>
       </div>

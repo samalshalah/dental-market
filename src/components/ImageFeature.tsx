@@ -18,18 +18,19 @@ export function ImageFeature({
   title,
   body,
   imageSrc,
+  imageAlt,
   bullets = [],
   ctaLabel,
   ctaHref
 }: ImageFeatureProps) {
   return (
     <div className="relative overflow-hidden border border-[#050505] bg-[#050505] p-8 text-white md:p-12 lg:p-16">
-      <Image src={imageSrc} alt="" fill sizes="100vw" className="object-cover opacity-[0.48]" />
-      <div className="absolute inset-0 bg-[#050505]/38" />
+      <Image src={imageSrc} alt={imageAlt} fill sizes="100vw" className="object-cover opacity-[0.58] grayscale" />
+      <div className="absolute inset-0 bg-[#050505]/30" />
       <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div>
           <p className="text-xs font-bold uppercase tracking-wide text-blue-200">{eyebrow}</p>
-          <h2 className="mt-3 text-4xl font-medium leading-tight text-white sm:text-5xl lg:text-6xl">{title}</h2>
+          <h2 className="mt-3 text-3xl font-medium leading-tight text-white sm:text-4xl lg:text-[2.55rem]">{title}</h2>
         </div>
         <div>
           <p className="text-lg leading-8 text-slate-200">{body}</p>

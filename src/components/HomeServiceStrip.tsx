@@ -10,38 +10,38 @@ type StripItem = {
 
 const stripItems: StripItem[] = [
   {
-    category: "Research",
+    category: "Sourcing",
     number: "01",
-    title: "Market Research",
-    body: "U.S. category demand, competitor positioning, visible pricing signals, and buyer expectations.",
+    title: "Supply Sourcing Review",
+    body: "Qualification review for selected dental supplies before sample requests, purchase discussion, or cooperation expectations.",
     image: "/images/dental-products/dental-accessories-assortment-1200.webp"
   },
   {
-    category: "Positioning",
+    category: "Buying Review",
     number: "02",
-    title: "Digital Positioning",
-    body: "Website, landing page, SEO, and sales messaging built around U.S. buyer clarity.",
+    title: "Sample and Supply Review",
+    body: "Supply fit, sample availability, packaging direction, pricing logic, and U.S. buyer presentation are reviewed first.",
     image: "/images/dental-products/restorative-dental-supplies-1200.webp"
   },
   {
-    category: "Validation",
+    category: "B2B Marketing",
     number: "03",
-    title: "Lead Generation Test",
-    body: "Focused lead capture and campaign planning to test buyer interest before scaling.",
+    title: "B2B Marketing Systems",
+    body: "English websites, multilingual-ready structure, SEO, distributor pages, and trade-show follow-up systems.",
     image: "/images/dental-products/orthodontic-bands-instruments-1200.webp"
   },
   {
     category: "Channels",
     number: "04",
-    title: "Distributor Readiness",
-    body: "A clearer market story, digital proof points, buyer objections, and channel direction.",
+    title: "Distributor / Dealer Materials",
+    body: "Clearer supply story, trust signals, buyer questions, and sales materials for channel conversations.",
     image: "/images/dental-products/sterile-metal-instruments-1200.webp"
   },
   {
-    category: "Launch",
+    category: "Follow-Up",
     number: "05",
-    title: "E-Commerce Strategy",
-    body: "Direct, distributor, marketplace, or hybrid planning based on product category and readiness.",
+    title: "Trade-Show Follow-Up",
+    body: "Landing pages, email and WeChat templates, lead tracking, and sales material organization after exhibitions.",
     image: "/images/dental-products/dental-polishing-burs-1200.webp"
   }
 ];

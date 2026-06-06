@@ -46,9 +46,9 @@ const config: Config = {
         panel: "0.375rem"
       },
       fontSize: {
-        "hero-mobile": ["2.5rem", { lineHeight: "1.06", letterSpacing: "0" }],
-        hero: ["4.5rem", { lineHeight: "1", letterSpacing: "0" }],
-        section: ["4rem", { lineHeight: "1.05", letterSpacing: "0" }]
+        "hero-mobile": ["2.25rem", { lineHeight: "1.08", letterSpacing: "0" }],
+        hero: ["3.75rem", { lineHeight: "1.02", letterSpacing: "0" }],
+        section: ["2.5rem", { lineHeight: "1.1", letterSpacing: "0" }]
       }
     }
   },

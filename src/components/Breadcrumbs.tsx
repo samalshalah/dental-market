@@ -8,7 +8,7 @@ type BreadcrumbsProps = {
 export function Breadcrumbs({ current, items = [] }: BreadcrumbsProps) {
   return (
     <nav aria-label="Breadcrumb" className="px-5 pt-8 text-sm sm:px-6 lg:px-8">
-      <ol className="mx-auto flex max-w-[1750px] flex-wrap gap-2 text-steel">
+      <ol className="mx-auto flex max-w-[1200px] flex-wrap gap-2 text-steel">
         <li>
           <Link href="/" className="font-semibold text-ocean hover:text-navy">
             Home
